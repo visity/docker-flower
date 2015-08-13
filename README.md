@@ -14,3 +14,8 @@ Example with linking:
 Example with redis running on 'another.host' (linking will not work across hosts):
 
 	docker run -d --name flower -e REDIS_HOST=another.host placr/flower
+	
+##WARNING
+**BE SURE NOT TO USE THE WORD 'FLOWER' IN THE ENVIRONMENT VARIABLES
+E.G. VIA LINKING OR MAESTRO-NG (BOTH OF WHICH MAKE THEM FOR SERVICE DISCOVERY): THEY HAVE A SPECIAL MEANING IN FLOWER. FLOWER WILL FAIL TO START**
+
