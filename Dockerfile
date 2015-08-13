@@ -11,4 +11,4 @@ ENV       REDIS_HOST redis
 ENV       REDIS_PORT 6379
 ENV       REDIS_DATABASE 0
 
-CMD       flower --broker=redis://$REDIS_HOST:$REDIS_PORT/$REDIS_DATABASE
+ENTRYPOINT flower --port=5555 --broker=redis://$REDIS_HOST:$REDIS_PORT/$REDIS_DATABASE
